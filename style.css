@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a164b;
+}
+
+h2{
+    color:white;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 10px;
+}
+
+h2:before{
+    content: "loading..";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    color:rgb(255, 187, 0);
+    border-right: 4px solid orange;
+    animation: animate 5s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes animate{
+    0%{width:0%;}
+    50%{width:100%;}
+    100%{width:0%;}
+}
